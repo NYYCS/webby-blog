@@ -86,15 +86,18 @@ const RegisterForm = () => {
         },
         body: JSON.stringify({
           query: `
-            mutation {
-              register(input: {
-                user_fullname: "${state.user_fullname}",
-                user_email: "${state.user_email}",
-                user_mobile: "${state.user_mobile}",
-                password: "${state.password}"
-              })
+            mutation Register($input: registerInput!){
+              register(input: $input)
             }
           `,
+          variables: {
+            input: {
+              user_fullname: state.user_fullname,
+              user_email: state.user_email,
+              user_mobile: state.user_mobile,
+              password: state.password
+            }
+          }
         }),
       }).then(res => res.json())
         .then(res => {
