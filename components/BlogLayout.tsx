@@ -27,6 +27,9 @@ const BlogLayout: React.FC = ({ children }) => {
             <span className="text-sm">{`id: ${user.user_id}`}</span>
             <span onClick={onLogout}>Logout</span>
           </>}
+          <Link href='/register'>
+            <a>Register</a>
+          </Link>
         </div>
       </nav>
       <main className="flex flex-col items-center flex-1 p-4">
