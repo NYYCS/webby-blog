@@ -1,13 +1,13 @@
 import type { NextPage } from 'next'
 
 import { BlogLayout } from '../components/BlogLayout'
-import { BlogPaginator } from '../components/BlogPaginator'
+import { LoginForm } from '../components/LoginForm'
 
 
 const Home: NextPage = () => {
   return (
     <BlogLayout>
-      <BlogPaginator/>
+      <LoginForm/>
     </BlogLayout>
   )
 }

@@ -60,6 +60,7 @@ const BlogPaginator: React.FC = () => {
     fetchBlogs();
   }, [page, fetchBlogs]);
 
+  
   const onPrev = () => {
     if (page > 0) setPage(page - 1);
   }
@@ -70,11 +71,11 @@ const BlogPaginator: React.FC = () => {
   
 
   return (
-    <div className="flex flex-col w-full max-w-prose items-center h-full gap-4">
+    <div className="flex flex-col items-center w-full h-full gap-4 max-w-prose">
       <div className="flex flex-row justify-start w-full">
         <div className="text-xl font-bold">Blogs</div>
       </div>
-      <div className="flex flex-col w-full gap-4 flex-1 justify-center items-center">
+      <div className="flex flex-col items-center justify-center flex-1 w-full gap-4">
         {loading ? <Loading/>: blogs.map((props, i) => <BlogPreview key={i} {...props}/>)}
         {!loading && blogs.length === 0 && <Empty back={onPrev}/>}
       </div>
@@ -84,7 +85,7 @@ const BlogPaginator: React.FC = () => {
         <button type="button" className="flex" onClick={onNext}>{'>'}</button>
       </div>
     </div>
-  )
+  );
 }
 
 
