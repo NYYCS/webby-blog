@@ -4,7 +4,7 @@ import { BlogLayout } from '../components/BlogLayout'
 import { RegisterForm } from '../components/RegisterForm'
 
 
-const Home: NextPage = () => {
+const RegisterPage: NextPage = () => {
   return (
     <BlogLayout>
       <RegisterForm/>
@@ -12,4 +12,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default RegisterPage
