@@ -1,6 +1,7 @@
 import React, { useState, useCallback, useEffect, createContext } from 'react';
 
 type User = {
+  user_fullname: String,
   user_id: String
 }
 
@@ -31,6 +32,7 @@ const AuthContextProvider: React.FC = ({ children }) => {
               login(input: $input) {
                 token
                 user {
+                  user_fullname
                   user_id
                 }
               }

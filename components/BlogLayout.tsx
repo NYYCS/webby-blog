@@ -24,7 +24,7 @@ const BlogLayout: React.FC = ({ children }) => {
         <div className="flex flex-row items-center justify-center flex-1 gap-4">
           {!loading && !user && <Link href='/login'><a>Login</a></Link>}
           {user && <>
-            <span className="text-sm">{`id: ${user.user_id}`}</span>
+            <span className="text-sm">{user.user_fullname}</span>
             <span onClick={onLogout}>Logout</span>
           </>}
           <Link href='/register'>
